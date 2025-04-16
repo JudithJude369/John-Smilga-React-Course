@@ -1,9 +1,10 @@
-import SingleQuestion from './SingleQuestion';
+import React from "react";
+import SingleQuestion from "./SingleQuestion";
 
 const Questions = ({ questions, activeId, toggleQuestion }) => {
   return (
-    <section className='container'>
-      <h1>Questions</h1>
+    <section className="container">
+      <h1>quesions</h1>
       {questions.map((question) => {
         return (
           <SingleQuestion
@@ -11,10 +12,11 @@ const Questions = ({ questions, activeId, toggleQuestion }) => {
             {...question}
             activeId={activeId}
             toggleQuestion={toggleQuestion}
-          ></SingleQuestion>
+          />
         );
       })}
     </section>
   );
 };
+
 export default Questions;
